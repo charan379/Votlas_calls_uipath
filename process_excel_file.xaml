@@ -5,7 +5,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>710,2333</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1041,2333</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>process_excel_file_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="60">
@@ -152,7 +152,8 @@
 "Assign Date",
 "Open Date",
 "Invalid Code Remarks",
-"Account Type"}]</InArgument>
+"Account Type",
+"Organization"}]</InArgument>
               </Assign.Value>
             </Assign>
             <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="516,1129" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[Cols_to_del]">

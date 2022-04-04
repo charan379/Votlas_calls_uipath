@@ -9,7 +9,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1012,1176</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1041,1176</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>main_flow_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="30">
@@ -78,7 +78,6 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Flowchart DisplayName="main_flow" sap:VirtualizedContainerService.HintSize="1022,1111" sap2010:WorkflowViewState.IdRef="Flowchart_1">
@@ -140,7 +139,7 @@
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <av:Point x:Key="ShapeLocation">50,564</av:Point>
               <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">150,615 150,630 190,630</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">150,615 150,640 190,640</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke create_folders_in_pwd workflow" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="create_folders_in_pwd.xaml">
@@ -164,9 +163,9 @@
             <FlowStep x:Name="__ReferenceID19">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">190,619</av:Point>
+                  <av:Point x:Key="ShapeLocation">190,629</av:Point>
                   <av:Size x:Key="ShapeSize">200,22</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">290,641 290,674.5</av:PointCollection>
+                  <av:PointCollection x:Key="ConnectorLocation">290,651 290,674.5</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
               <Delay DisplayName="wait for file to be downloaded" Duration="00:00:05" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Delay_1">
@@ -459,10 +458,7 @@
                                       </sap:WorkflowViewStateService.ViewState>
                                     </ui:InputDialog>
                                     <FlowStep.Next>
-                                      <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID2}" x:Name="__ReferenceID21" DisplayName="Part Call Options" sap:VirtualizedContainerService.HintSize="95,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_6">
-                                        <FlowSwitch.Expression>
-                                          <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="part_calls_options" />
-                                        </FlowSwitch.Expression>
+                                      <FlowSwitch x:TypeArguments="x:String" Default="{x:Reference __ReferenceID2}" x:Name="__ReferenceID21" DisplayName="Part Call Options" Expression="[part_calls_options]" sap:VirtualizedContainerService.HintSize="95,87" sap2010:WorkflowViewState.IdRef="FlowSwitch`1_6">
                                         <sap:WorkflowViewStateService.ViewState>
                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                             <av:Point x:Key="ShapeLocation">615,606.5</av:Point>
@@ -482,9 +478,7 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PartCallsMainFlow workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_10" UnSafe="False" WorkflowFileName="Part Calls\PartCallsMainFlow.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
-                                              <InArgument x:TypeArguments="x:String" x:Key="In_mainCalls">
-                                                <mva:VisualBasicValue x:TypeArguments="x:String" ExpressionText="pwdExcel + &quot;calls.xlsx&quot;" />
-                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="In_mainCalls">[pwdExcel + "calls.xlsx"]</InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                             <sap:WorkflowViewStateService.ViewState>
                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
